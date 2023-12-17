@@ -13,6 +13,7 @@
 #include <chrono>
 #include <vector>
 #include <dirent.h>
+#include <map>
 
 class Server {
 public:
@@ -44,6 +45,7 @@ private:
     std::string receiveCommand(int clientSocket);
     void handleReceiveError(ssize_t bytesReceived);
     bool directoryExists(const std::string& path);
+    std::map<std::string, int> messageCounters;
 
 
 private:
@@ -54,6 +56,7 @@ private:
     std::string receiver;
     std::string subject;
     std::string message;
+    
 };
 
 #endif // SERVER_H

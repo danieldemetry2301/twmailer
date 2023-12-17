@@ -18,12 +18,14 @@ private:
     bool isValidCommand(const std::string& command);
     void printUsage();
     bool isValidName(const std::string& name);
+    
 
 
 private:
     int clientSocket;
     std::string ip;
     int port;
+    
 
 };
 
